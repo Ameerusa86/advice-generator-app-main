@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Colors */
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  min-width: 1440px;
+  min-height: 100vh;
+  background-color: var(--Dark-Blue);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  place-items: center;
+  font-family: "manrope", sans-serif;
+}
+
+.card {
+  width: 850px;
+  height: 400px;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.card h3 {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+.card p {
+  color: var(--light-cyan);
+  padding: 0 2rem;
+  font-size: 28px;
+}
+
+.line {
+  margin-top: 1rem;
+}
+
+.dice_icon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--neon-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25rem;
+}
