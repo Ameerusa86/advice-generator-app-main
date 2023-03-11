@@ -15,61 +15,83 @@
   --Dark-Blue: hsl(218, 23%, 16%);
 }
 
-body {
-  width: 1440px;
+.main {
   height: 100vh;
-  background-color: var(--Dark-Blue);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   display: flex;
-  place-items: center;
-  font-family: "manrope", sans-serif;
-}
-
-.card {
-  width: 850px;
-  height: 400px;
-  background-color: var(--Dark-Grayish-Blue);
-  border-radius: 10px;
-  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.card h3 {
-  color: var(--neon-green);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 1rem;
-  font-size: 0.75rem;
-}
-
-.card p {
+  background-color: var(--Dark-Blue);
+  font-family: "Manrope", sans-serif;
   color: var(--light-cyan);
-  padding: 0 2rem;
-  font-size: 28px;
 }
 
-.line {
-  margin-top: 1rem;
-}
-
-.dice_icon {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: var(--neon-green);
+.container {
+  width: 500px;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25rem;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 6rem;
 }
 
-@media (max-width: 375px) {
-  .card {
-    width: 600px;
+.p {
+  text-transform: uppercase;
+  color: var(--neon-green);
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+#data {
+  font-size: 1.5rem;
+  color: var(--light-cyan);
+}
+
+.circle {
+  margin-bottom: -55px;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: var(--neon-green);
+  cursor: pointer;
+}
+
+.circle:hover {
+  box-shadow: 0 0 30px var(--neon-green);
+}
+.mob {
+  display: none;
+}
+
+.desc {
+  display: flex;
+}
+
+@media only screen and (max-device-width: 812px) {
+  body {
+    background-color: var(--Dark-Blue);
+  }
+  .main {
+    height: 100vh;
+    width: 100%;
+  }
+  .container {
+    width: 95%;
+  }
+  .desc {
+    display: none;
+  }
+  .mob {
+    display: flex;
   }
 }

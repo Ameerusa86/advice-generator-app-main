@@ -1,13 +1,23 @@
 // DOM Elements
-const number = document.getElementById("advice_number");
-const quote = document.getElementById("quote");
+const number = document.getElementById("id");
+const quote = document.getElementById("data");
 
 // API
 const api = "https://api.adviceslip.com/advice";
 
-const API = fetch(api)
-  .then((response) => response.json())
-  .then((data) => {
-    quote.innerHTML = data.slip.advice;
-    number.innerText = data.slip.id;
-  });
+async function fetchData() {
+  try {
+    const res = await fetch(api);
+    const adviceData = await res.json();
+    number.innerHTML = adviceData.slip.id;
+    quote.innerHTML = adviceData.slip.advice;
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+fetchData();
+
+function change() {
+  fetchData();
+}
